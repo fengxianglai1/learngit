@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+		<meta name="misapplication-tap-highlight" content="no"/>
+		<meta name="HandheldFriendly" content="true"/>
+		<meta name="MobileOptimized" content="320"/>
+		<title>Hello H5+</title>
+		<script src="js/mui.min.js"></script>
+    	<link href="css/mui.min.css" rel="stylesheet"/>
+		<script type="text/javascript" src="js/update.js"></script>
+		<script type="text/javascript" charset="utf-8"></script>
+
+	</head>
+	<body onselectstart="return false;">
+		<!--<header id="header">
+			<div id="back" style="visibility:hidden" class="nvbt iback" onclick="plus.runtime.quit()"></div>
+			<div class="nvtt">Hello HTML5+</div>
+			<div class="nvbt iabout" onclick="clicked('about.html','zoom-fade-out',true)"></div>
+		</header>-->
+		
+		<nav class="mui-bar mui-bar-tab">
+            <div class="mui-tab-item mui-active" hr='html/main.html'>
+                <span class="mui-icon mui-icon-contact"></span>
+                <span class="mui-tab-label">首页</span>
+            </div>
+        
+            <div class="mui-tab-item" hr='html/new.html'>
+                 <span class="mui-icon mui-icon-chatboxes"></span>
+                <span class="mui-tab-label">消息</span>
+            </div>
+            <div class="mui-tab-item" hr='html/set.html'>
+                <span class="mui-icon mui-icon-gear"></span>
+                <span class="mui-tab-label">设置</span>
+            </div>
+        </nav>
+		<!--<div id="content" class="content">
+		<ul id="plist" style="list-style:none;margin:0;padding:0;text-align:left;">
+			<li id="plus/accelerometer.html" onclick="clicked(this.id)">
+				<span class="item">Accelerometer
+					<div class="chs">加速度传感器</div>
+				</span>
+			</li>
+			<li id="plus/audio.html" onclick="clicked(this.id)">
+				<span class="item">Audio
+					<div class="chs">音频录制/播放</div>
+				</span>
+			</li>
+			<li id="plus/barcode.html" onclick="clicked(this.id)">
+				<span class="item">Barcode
+					<div class="chs">二维码扫描</div>
+				</span>
+			</li>
+			<li id="plus/camera.html" onclick="clicked(this.id)">
+				<span class="item">Camera
+					<div class="chs">摄像头拍照/录像</div>
+				</span>
+			</li>
+			<li id="plus/device.html" onclick="clicked(this.id)">
+				<span class="item">Device
+					<div class="chs">设备信息</div>
+				</span>
+			</li>
+			<li id="plus/downloader.html" onclick="clicked(this.id)">
+				<span class="item">Downloader
+					<div class="chs">下载管理</div>
+				</span>
+			</li>
+			<li id="plus/events.html" onclick="clicked(this.id)">
+				<span class="item">Events
+					<div class="chs">系统事件</div>
+				</span>
+			</li>
+			<li id="plus/file.html" onclick="clicked(this.id)">
+				<span class="item">File System
+					<div class="chs">文件系统</div>
+				</span>
+			</li>
+			<li id="plus/gallery.html" onclick="clicked(this.id)">
+				<span class="item">Gallery
+					<div class="chs">系统相册</div>
+				</span>
+			</li>
+			<li id="plus/geolocation.html" onclick="clicked(this.id)">
+				<span class="item">Geolocation
+					<div class="chs">地理定位</div>
+				</span>
+			</li>
+			<li id="plus/maps.html" onclick="clicked(this.id)">
+				<span class="item">Maps
+					<div class="chs">地图</div>
+				</span>
+			</li>
+			<li id="plus/message.html" onclick="clicked(this.id)">
+				<span class="item">Messaging
+					<div class="chs">消息通讯</div>
+				</span>
+			</li>
+			<li id="plus/nativeobj.html" onclick="clicked(this.id)">
+				<span class="item">NativeObj
+					<div class="chs">原生对象</div>
+				</span>
+			</li>
+			<li id="plus/nativeui.html" onclick="clicked(this.id)">
+				<span class="item">NativeUI
+					<div class="chs">原生界面</div>
+				</span>
+			</li>
+			<li id="plus/navigator.html" onclick="clicked(this.id)">
+				<span class="item">Navigator
+					<div class="chs">浏览器环境</div>
+				</span>
+			</li>
+			<li id="plus/oauth.html" onclick="clicked(this.id)">
+				<span class="item">OAuth
+					<div class="chs">授权登录认证</div>
+				</span>
+			</li>
+			<li id="plus/orientation.html" onclick="clicked(this.id)">
+				<span class="item">Orientation
+					<div class="chs">方向传感器</div>
+				</span>
+			</li>
+			<li id="plus/payment.html" onclick="clicked(this.id)">
+				<span class="item">Payment
+					<div class="chs">支付</div>
+				</span>
+			</li>
+			<li id="plus/proximity.html" onclick="clicked(this.id)">
+				<span class="item">Proximity
+					<div class="chs">距离传感器</div>
+				</span>
+			</li>
+			<li id="plus/push.html" onclick="clicked(this.id)">
+				<span class="item">Push
+					<div class="chs">消息推送</div>
+				</span>
+			</li>
+			<li id="plus/runtime.html" onclick="clicked(this.id)">
+				<span class="item">Runtime
+					<div class="chs">运行环境</div>
+				</span>
+			</li>
+			<li id="plus/share.html" onclick="clicked(this.id)">
+				<span class="item">Share
+					<div class="chs">分享</div>
+				</span>
+			</li>
+			<li id="plus/speech.html" onclick="clicked(this.id)">
+				<span class="item">Speech
+					<div class="chs">语音识别</div>
+				</span>
+			</li>
+			<li id="plus/statistic.html" onclick="clicked(this.id)">
+				<span class="item">Statistic
+					<div class="chs">统计管理</div>
+				</span>
+			</li>
+			<li id="plus/storage.html" onclick="clicked(this.id)">
+				<span class="item">Storage
+					<div class="chs">本地数据存储</div>
+				</span>
+			</li>
+			<li id="plus/uploader.html" onclick="clicked(this.id)">
+				<span class="item">Uploader
+					<div class="chs">上传管理</div>
+				</span>
+			</li>
+			<li id="plus/webview.html" onclick="clicked(this.id)">
+				<span class="item">Webview
+					<div class="chs">窗口管理</div>
+				</span>
+			</li>
+			<li id="plus/xhr.html" onclick="clicked(this.id)">
+				<span class="item">XMLHttpRequest
+					<div class="chs">跨域请求</div>
+				</span>
+			</li>
+			<li id="plus/zip.html" onclick="clicked(this.id)">
+				<span class="item">ZIP
+					<div class="chs">文件压缩/解压</div>
+				</span>
+			</li>
+			<li id="plus/njs.html" onclick="clicked(this.id)">
+				<span class="item">Native.JS
+					<div class="chs">JS调用原生代码</div>
+				</span>
+			</li>
+		</ul>
+		</div>-->
+	</body>
+	<!--<script type="text/javascript" src="js/immersed.js" ></script>
+	<script type="text/javascript" src="js/shortcut.js" ></script>-->
+	<script type="text/javascript">
+	var views=['html/main.html','html/new.html','html/set.html']
+    views_style=[{top:'0px',bottom: '51px'},{top:'50px',bottom: '51px'},{top:'50px',bottom: '51px'}]
+	mui.plusReady(function(){
+	        var self = plus.webview.currentWebview(); //获取当前页面对象
+	        for(var i = 0 ; i<views.length ; i++){
+	               var sub = plus.webview.create(views[i],views[i],views_style[i]); //创建页面
+	                if(i>0){
+	                    sub.hide()  //隐藏页面
+	                }                   
+	                self.append(sub) //显示页面apend()方法在html5plus文档中没有提到，这里的这个方法是将webview对象填充到窗口的方法。           
+	     }      
+	 	})
+     var activeTab=views[0]; //激活选项卡 
+//	var title= document.querySelector('.mui-title') 
+	 mui(".mui-bar-tab").on('tap','div',function(){
+	     var tab = this.getAttribute('hr'); //  获取点击页面ID
+	     if(activeTab==tab){  
+	           return;
+	     }                
+	     plus.webview.show(tab); //    显示点击webview   
+	     plus.webview.hide(activeTab);   //隐藏当前 webview  
+//	     title.innerHTML=this.querySelector('.mui-tab-label').innerHTML
+	    activeTab=tab;
+	 })
+		</script>
+
+</html>

@@ -1,0 +1,20 @@
+{
+	"index.html": {
+		"refer": [
+			"plus/njs.html",
+			"plus/file.html",
+			"plus/accelerometer.html",
+			"html/main.html",
+			"html/set.html",
+			"html/new.html"
+		],
+		"resources": [
+			"html/main.html"
+		]
+	},
+	"html/new.html": {
+		"refer": [
+			"plus/camera.html"
+		]
+	}
+}
