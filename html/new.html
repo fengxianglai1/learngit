@@ -3,10 +3,44 @@
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
+		<meta name="viewport" content="width=deice-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
 		<script src="../js/mui.js"></script>
     	<link href="../css/mui.min.css" rel="stylesheet"/>
+    	<style>
+    		*{
+    			margin: 0;
+    			padding: 0;
+    		}
+    		#ulList{
+    			width: 100%;
+    			display: flex;
+    			display: -webkit-flex;
+    			list-style-type: none;
+    			background: #999999;
+    			padding:0 20px;
+    		}
+    		#ulList li{
+    			font-size:20px;
+    			line-height: 40px;
+    			font-family:"arial, helvetica, sans-serif";
+    			height: 40px;
+    			width: 25%;
+    			flex: 1;
+    			text-align: center;
+    		}
+    	</style>
 	</head>
 	<body>
+		<ul id="ulList">
+			<li>全部</li>
+			<li>待付款</li>
+			<li>待收货</li>
+			<li>待评价</li>
+			<li>退换货</li>
+		</ul>
+		
 		<button id="crema" type="button" class="mui-btn mui-btn-primary mui-btn-outlined">蓝色</button>
 		<script>
 			mui("body").on('tap','#crema',function(){		

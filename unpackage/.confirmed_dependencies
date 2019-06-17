@@ -1,20 +1,31 @@
 {
-	"index.html": {
-		"refer": [
-			"plus/njs.html",
-			"plus/file.html",
-			"plus/accelerometer.html",
-			"html/main.html",
-			"html/set.html",
-			"html/new.html"
-		],
-		"resources": [
-			"html/main.html"
-		]
-	},
-	"html/new.html": {
-		"refer": [
-			"plus/camera.html"
-		]
-	}
+  "index.html": {
+    "refer": [
+      "plus/njs.html",
+      "plus/file.html",
+      "plus/accelerometer.html",
+      "html/main.html",
+      "html/set.html",
+      "html/new.html"
+    ],
+    "resources": [
+      "html/main.html"
+    ]
+  },
+  "html/new.html": {
+    "refer": [
+      "plus/camera.html"
+    ]
+  },
+  "plus/camera.html": {
+    "refer": [
+      "plus/doc.html",
+      "plus/camera_image.html"
+    ]
+  },
+  "plus/doc.html": {
+    "refer": [
+      "doc/camera.html"
+    ]
+  }
 }

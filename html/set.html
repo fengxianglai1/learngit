@@ -1,12 +1,200 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<title></title>
-		<script src="../js/mui.js"></script>
-    	<link href="../css/mui.min.css" rel="stylesheet"/>
-	</head>
-	<body>
-		2222222
-	</body>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+    <meta name="viewport" content="width=deice-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <link rel="stylesheet" href="https://a.amap.com/jsapi_demos/static/demo-center/css/demo-center.css" />
+    <title>上拉加载下拉刷新效果</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        
+        #example {
+            width: 100%;
+            display: flex;
+            display: -webkit-flex;
+            list-style-type: none;
+        }
+        
+        #example li {
+            flex: 1;
+            text-align: center;
+            background: red;
+            height: 50px;
+            line-height: 50px
+        }
+        
+        #example li:first-child {
+            background: orange;
+        }
+        
+        #example li:last-child {
+            background: yellow;
+        }
+        
+        #listArray {
+            width: 100%;
+            list-style-type: none;
+        }
+        
+        #listArray li {
+            height: 60px;
+        }
+        
+        .refreshText {
+            position: absolute;
+            width: 100%;
+            line-height: 50px;
+            text-align: center;
+            left: 0;
+            top: 50px;
+        }
+    </style>
+</head>
+
+<body style="overflow-x: hidden;">
+    <ul id="example">
+        <li>全部</li>
+        <li>第一列</li>
+        <li>第二列</li>
+    </ul>
+    <p class="refreshText"></p>
+    <ul id="listArray">
+        <li>12345</li>
+        <li>12345</li>
+        <li>12345</li>
+        <li>12345</li>
+        <li>12345</li>
+        <li>12345</li>
+        <li>12345</li>
+        <li>12345</li>
+        <li>12345</li>
+        <li>12345</li>
+        <li>12345</li>
+        <li>12345</li>
+        <li>12345</li>
+        <li>12345</li>
+        <li>1000000000002345</li>
+    </ul>
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+
+    <script>
+    	   $(document).scroll(function(){
+				var bheight = $(document).height();//获取窗口高度
+				var sheight = $("body")[0].scrollHeight;//获取滚动条高度，[0]是为了把jq对象转化为js对象
+				var stop = getScrollTop();//滚动条距离顶部的距离
+				
+				
+				console.log("bheight:"+bheight);
+				console.log("sheight:"+sheight);
+				console.log("stop:"+stop);
+				console.log("document.body.scrollTop:"+document.body.scrollTop);
+				console.log("window.screen.height:"+window.screen.height)
+				
+				
+				if(stop==0){
+					alert("下拉刷新");
+				}
+				
+				
+				//滚动框到底部时加载更多
+				if(stop-60>=sheight-window.screen.height && getScrollTop()!=0){//当滚动条到顶部的距离等于滚动条高度减去窗口高度时
+					alert("加载更多");
+					
+					//加载更多新闻
+					
+					
+				}
+				 function getScrollTop(){    
+			        var scrollTop=0;    
+			        if(document.documentElement&&document.documentElement.scrollTop){    
+			            scrollTop=document.documentElement.scrollTop;    
+			        }else if(document.body){    
+			            scrollTop=document.body.scrollTop;    
+			        }    
+			        return scrollTop;    
+			    }
+
+			})
+
+//      console.log("滚动条隔顶部距离" + document.documentElement.scrollTop);
+//      var _element = document.getElementById('listArray'),
+//          _refreshText = document.querySelector('.refreshText'),
+//          _startPos = 0, //开始位置
+//          _transitionHeight = 0;
+//      _element.addEventListener('touchstart', function (e) {
+//          console.log('初始位置：', e.touches[0].pageY);
+//          _startPos = e.touches[0].pageY;
+//
+//          _element.style.position = 'relative';
+//          _element.style.transition = 'transform 0s';
+//      }, false);
+//
+//      _element.addEventListener('touchmove', function (e) {
+//
+//          _transitionHeight = e.touches[0].pageY - _startPos;
+//          if (_transitionHeight > 0 && _transitionHeight < 60 && document.documentElement.scrollTop <= 0) {
+//              _refreshText.innerText = '下拉刷新';
+//              _element.style.transform = 'translateY(' + _transitionHeight + 'px)';
+//              if (_transitionHeight > 55) {
+//                  _refreshText.innerText = '释放更新';
+//              }
+//              xialaStart();
+//          }
+//          if (document.body.clientHeight - document.documentElement.scrollTop == getClientHeight()) {//滚动条到达底部时
+//				alert("到达底部")
+//              shanglalaStart();
+//          }
+//          //  
+//
+//          function getClientHeight() {   //滚动条高度 
+//              var clientHeight = 0;
+//              if (document.body.clientHeight && document.documentElement.clientHeight) {
+//                  var clientHeight = (document.body.clientHeight < document.documentElement.clientHeight) ? document.body.clientHeight : document.documentElement.clientHeight;
+//              } else {
+//                  var clientHeight = (document.body.clientHeight > document.documentElement.clientHeight) ? document.body.clientHeight : document.documentElement.clientHeight;
+//              }
+//              return clientHeight;
+//          }
+//
+//      }, false);
+//
+//      function xialaStart() {
+//          _element.addEventListener('touchend', function (e) {
+//              _element.style.transition = 'transform 0.5s ease 1s';
+//              _element.style.transform = 'translateY(0px)';
+//
+//              _refreshText.innerText = '更新中...';
+//              console.log("滚动条隔顶部距离22222" + document.documentElement.scrollTop);
+//              document.documentElement.scrollTop = 0;
+//              setTimeout(function () {
+//                  _refreshText.innerText = ""
+//              }, 2000);
+//
+//              // todo...
+//          }, false);
+//      }
+//      function shanglalaStart() {
+//          _element.addEventListener('touchend', function (e) {
+//              _element.style.transition = 'transform 0.5s ease 1s';
+//              _element.style.transform = 'translateY(0px)';
+//              var t=document.createElement("li")
+//              t.innerText="11111111111111111"
+//              document.getElementById('listArray').appendChild(t)
+//              
+//
+//              // todo...
+//          }, false);
+//      }
+    </script>
+</body>
+
 </html>
